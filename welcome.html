@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Balu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/typed.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="welcome-wrapper">
+  <h1 id="line1"></h1>
+  <h1 id="line2">I'm <span id="typed-role"></span></h1>
+  <h1 id="line3"></h1>
+</div>
+
+<script>
+  // Load particles
+  particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles loaded');
+  });
+
+  // Step 1: Welcome Developers
+  const step1 = new Typed('#line1', {
+    strings: ["WELCOME DEVELOPERS"],
+    typeSpeed: 50,
+    showCursor: false,
+    onComplete: () => {
+      // Step 2: I am <typed>
+      new Typed('#typed-role', {
+        strings: ['Software Engineer', 'Full Stack Developer', 'ML Developer', 'Remote Sensing Analyst'],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: true
+      });
+
+      // Step 3: Final line
+      new Typed('#line3', {
+        strings: ["Turning dreams into reality"],
+        typeSpeed: 50,
+        startDelay: 1000,
+        showCursor: false
+      });
+
+      // Step 4: Redirect after 7 seconds
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 7000);
+    }
+  });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

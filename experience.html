@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience | Balu</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-title">My Portfolio</div>
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="experience.html">Work Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+      
+
+<div class="container">
+  <h2>Work Experience</h2>
+  <div class="experience-card" onclick="openExperiencePopup()">
+    <img src="images/nias.jpg" alt="NIAS Internship">
+    <h3>Intern – NIAS, Bengaluru</h3>
+    <p>Click to view more about my work in satellite-based plantation analysis...</p>
+  </div>
+</div>
+
+<!-- Experience Popup -->
+<div id="experience-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeExperiencePopup()">&times;</span>
+    <h3>Internship at NIAS – 45 Days</h3>
+    <p>
+      During my 45-day internship at the National Institute of Advanced Studies, I worked on remote sensing techniques to identify rubber plantations in Assam using satellite imagery within the Google Earth Engine platform. My work involved analyzing large-scale data to accurately detect plantation areas and applying the LandTrendr model to calculate the age of rubber plantations. This experience enhanced my skills in geospatial analysis and satellite data processing, contributing valuable insights into plantation dynamics.
+    </p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
